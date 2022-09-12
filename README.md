@@ -13,3 +13,9 @@ In this repository...
 ...
 
 ## People
+
+- Chiara
+- Erica
+- Guglielmo
+- ...
+
