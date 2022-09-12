@@ -14,8 +14,8 @@ In this repository...
 
 ## Contacts
 
-- Chiara
-- Erica
-- Guglielmo
-- ...
+- Erica Biagetti
+- Guglielmo Inglese
+- Chiara Zanchi chiara.zanchi01@unipv.it
+- Silvia Luraghi silvia.luraghi@unipv.it
 
