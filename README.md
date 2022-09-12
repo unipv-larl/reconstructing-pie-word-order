@@ -12,7 +12,7 @@ In this repository...
 
 ...
 
-## People
+## Contacts
 
 - Chiara
 - Erica
