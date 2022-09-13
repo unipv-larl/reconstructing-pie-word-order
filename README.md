@@ -12,7 +12,7 @@ All emplyed treebanks are available on Surface [Syntactic Universal Dependencies
 
 ## Queries
 
-### 1. Adpositions
+### 1. Adpositions (NAdp/AdpN)
 SUD Treebanks: 
 ```
 xxx
@@ -22,7 +22,7 @@ Non-SUD Treebanks:
 cat Vedic_DCS/Gr_Hom/Gr_Daph.conllu | udapy util.See node='node.deprel == "case" and node.upos == "ADP" and node.parent.upos in (“NOUN”, “PROPN”)' 
 ```
 
-### 2. Genitive Modifiers
+### 2. Genitive Modifiers (NG/GN)
 SUD Treebanks:
 ```
 xxx
@@ -32,7 +32,7 @@ Non-SUD Treebanks:
 cat Vedic_DCS/Gr_Hom/Gr_Daph.conllu | udapy util.See node='node.deprel == "nmod" and node.upos == "NOUN" and node.feats["Case"] == "Gen" and node.parent.upos in (“NOUN”, “PROPN”)' 
 ```
 
-### 3. Adjectival Modifiers
+### 3. Adjectival Modifiers (NA/AN)
 SUD Treebanks: 
 ```
 xxx
@@ -42,7 +42,7 @@ Non-SUD Treebanks:
 cat Vedic_DCS/Gr_Hom/Gr_Daph.conllu | udapy util.See node='node.deprel == "amod" and node.upos == "ADJ" and node.parent.upos in (“NOUN”, “PROPN”)' 
 ```
 
-### 4. Direct Objects (of finite verbs only)
+### 4. Direct Objects (VO/OV, finite verbs only)
 SUD Treebanks:
 ```
 xxx
