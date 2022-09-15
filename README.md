@@ -15,7 +15,11 @@ All emplyed treebanks are available on Surface [Syntactic Universal Dependencies
 ### 1. Adpositions (NAdp/AdpN)
 SUD Treebanks: 
 ```
-xxx
+AdpN 
+{GOV -[comp:obj]-> DEP; 
+GOV [upos="ADP"]; 
+DEP [upos="NOUN"];
+DEP << GOV} / DEP >> GOV}
 ```
 Non-SUD Treebanks: 
 ```
@@ -25,7 +29,16 @@ cat Vedic_DCS/Gr_Hom/Gr_Daph.conllu | udapy util.See node='node.deprel == "case"
 ### 2. Genitive Modifiers (NG/GN)
 SUD Treebanks:
 ```
-xxx
+{GOV [upos = NOUN];
+  GOV -[mod]-> DEP; DEP [upos=NOUN, Case=Gen];
+  DEP << GOV;} / GOV << DEP;}
+```
+Italian 
+```
+{N [upos = NOUN];
+  N -[udep]-> PREP; PREP [lemma=di];
+  PREP -[comp:obj]-> G; G [upos=NOUN]; 
+  N << PREP;} /  PREP << N;}
 ```
 Non-SUD Treebanks: 
 ```
@@ -35,7 +48,9 @@ cat Vedic_DCS/Gr_Hom/Gr_Daph.conllu | udapy util.See node='node.deprel == "nmod"
 ### 3. Adjectival Modifiers (NA/AN)
 SUD Treebanks: 
 ```
-xxx
+{GOV [upos = NOUN];
+  GOV -[mod]-> DEP; DEP [upos=ADJ];
+  DEP << GOV;} / GOV << DEP;}
 ```
 Non-SUD Treebanks: 
 ```
@@ -45,7 +60,15 @@ cat Vedic_DCS/Gr_Hom/Gr_Daph.conllu | udapy util.See node='node.deprel == "amod"
 ### 4. Direct Objects (VO/OV, finite verbs only)
 SUD Treebanks:
 ```
-xxx
+{V [upos = VERB, VerbForm= Fin];
+ V -[comp:obj]-> O; O [upos=NOUN];
+ O << V;} / V << O;}
+```
+Armenian
+```
+{V [upos = VERB, VerbForm= Fin];
+ P [upos=NOUN]; V -[comp:obj@dir]-> P; 
+ V >> P;} / P >> V;}
 ```
 Non-SUD Treebanks: 
 ```
